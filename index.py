@@ -54,3 +54,13 @@ def fun():
             hint.set('Congrats, you won!')
             score.set(score.get()-1)
             finalScore.set(score.get())
+        elif num>x:
+            hint.set('You guessed too low, try again...')
+            score.set(score.get()-1)
+            finalScore.set(score.get())
+        elif num<x:
+            hint.set('You guessed too high, try again...')
+            score.set(score.get()-1)
+            finalScore.set(score.get())
+    else:
+        hint.set('HA, you lost! Better luck next time...')
