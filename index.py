@@ -29,7 +29,7 @@ def fun():
     x=guess.get()
     finalScore.set(score.get())
     if score.get()>0:
-        if x>20 or x<0:
+        if x>100 or x<0:
             hint.set('You lost a chance!')
             score.set(score.get()-1)
             finalScore.set(score.get())
@@ -58,7 +58,7 @@ def fun():
 
 Entry(win, textvariable=guess, width=3, font=('Ubuntu', 50), relief=GROOVE).place(relx=0.5, rely=0.3, anchor=CENTER)
 Entry(win, textvariable=hint, width=50, font=('Courier', 15), relief=GROOVE, bg='orange').place(relx=0.5, rely=0.7, anchor=CENTER)
-Entry(win, text=finalScore, width=2, font=('Ubuntu', 24), relief=GROOVE).place(relx=0.5, rely=0.85, anchor=CENTER)
+Entry(win, text=finalScore, width=2, font=('Ubuntu', 24), relief=GROOVE).place(relx=0.55, rely=.85, anchor=CENTER)
 Label(win, text='Guess the number, foo', font=('Courier', 25)).place(relx=0.5, rely=0.09, anchor=CENTER)
 Label(win, text='Score out of 5', font=('Courier', 25)).place(relx=0.3, rely=0.85, anchor=CENTER)
 Button(win, width=8, text='GUESS', font=('Courier', 25), command=fun, relief=GROOVE, bg='light blue').place(relx=0.5, rely=0.5, anchor=CENTER)
